@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.antosara.akandaka.AppController">
+    <tabs>
+        <Tab closable="false" text="Passwords">
+            <content>
+                <Accordion>
+                    <panes>
+                        <TitledPane animated="false" text="Browse">
+                            <content>
+                                <fx:include fx:id="listPasswordEntries" source="ListPasswordEntries.fxml" />
+                            </content>
+                        </TitledPane>
+                        <TitledPane animated="false" text="Add">
+                            <content>
+                                <fx:include fx:id="createPasswordEntry" source="CreatePasswordEntry.fxml" />
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </content>
+        </Tab>
+        <Tab text="Settings">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <VBox prefHeight="367.0" prefWidth="600.0" spacing="10.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="474.0" spacing="10.0">
+                                    <children>
+                                        <Label text="Database File" />
+                                        <TextField fx:id="dbFile" editable="false" prefHeight="26.0" prefWidth="265.0" />
+                                        <Button fx:id="selectDbFile" mnemonicParsing="false" onMouseClicked="#selectDbFile" text="Select" />
+                                        <Button fx:id="createDbFile" mnemonicParsing="false" onMouseClicked="#createDbFile" text="Create" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Help">
+            <content>
+                <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" />
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
