@@ -203,6 +203,6 @@ public class AppController implements Initializable {
 
 	public void loadHelp() {
 		final WebEngine webEngine = webView.getEngine();
-		webEngine.load("http://pvinay.github.io/securestore/help.html");
+		webEngine.load("http://pvinay.github.io/akandaka/help.html");
 	}
 }
